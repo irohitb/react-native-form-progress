@@ -1,0 +1,33 @@
+{
+  "name": "react-native-form-prorgress",
+  "version": "0.0.1",
+  "description": "git push -u origin master",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irohitb/react-native-form-prorgress.git"
+  },
+  "keywords": [
+    "form",
+    "progress",
+    "progress-bar",
+    "progressbar",
+    "react-native",
+    "react"
+  ],
+  "author": "\"Rohit Bhatia <irohitbhatia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-native": "^0.60.5",
+    "react-native-smart-statusbar": "^1.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/irohitb/react-native-form-prorgress/issues"
+  },
+  "homepage": "https://github.com/irohitb/react-native-form-prorgress#readme"
+}
