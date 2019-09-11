@@ -44,7 +44,7 @@ and just keep incrementing current progress
 | heightOfProgressBar | number | 5 | No | what should be the height of your progress bar |
 | SafeAreaViewDeciderProps | object | ```statusBarHiddenForNotch: false <br> statusBarHiddenForNonNotch: false``` | No | Takes [SafeAreaViewDeciderProps](https://www.npmjs.com/package/react-native-smart-statusbar) Props as an object |
 | 	blink | boolean | true | No | Do you wan the progress bar to blink or not | 
-|   durationForTheBlink | false | 500 | how fast you want the blink to happen
+|   durationForTheBlink | false | 500 | No | how fast you want the blink to happen
 
 
 
