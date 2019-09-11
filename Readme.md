@@ -1,3 +1,6 @@
+
+[![NPM](https://nodei.co/npm/react-native-form-prorgress.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-form-prorgress/)
+
 # React Native Form progress 
 
 A react native component super useful in displaying progress when user is filling up forms like signup page, setting, information catering etc
@@ -28,10 +31,6 @@ and just keep incrementing current progress
 ### With blink 
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/32276134/64683540-1180fd00-d4a1-11e9-9711-c87b2905b8d4.gif)
-
-### Without Blink 
-
-
 
 ###  Props 
 
