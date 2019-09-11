@@ -41,9 +41,24 @@ and just keep incrementing current progress
 | currentProgress | number | none | Yes | the current progress of your progress bar, **increment this value** on sucessful completion of event |
 | totalNumberOfProgressBars | number | none | Yes | Typical this determines how many boxes should progress bar have in all together | 
 | heightOfProgressBar | number | 5 | No | what should be the height of your progress bar |
-| SafeAreaViewDeciderProps | object | ```statusBarHiddenForNotch: false <br> statusBarHiddenForNonNotch: false``` | No | Takes [SafeAreaViewDeciderProps](https://www.npmjs.com/package/react-native-smart-statusbar) Props as an object |
+| SafeAreaViewDeciderProps | object |  See below | No | Takes [SafeAreaViewDeciderProps](https://www.npmjs.com/package/react-native-smart-statusbar) Props as an object |
 | 	blink | boolean | true | No | Do you wan the progress bar to blink or not | 
 |   durationForTheBlink | false | 500 | No | how fast you want the blink to happen
 
+### Props for Safe Area 
 
+Pass Safe Area props like this 
 
+```
+	SafeAreaViewDeciderProps: {
+		statusBarHiddenForNotch: false,
+		statusBarHiddenForNonNotch: false,
+	},
+  ```
+
+  Default value for Safe Area are 
+
+```
+statusBarHiddenForNotch: false,
+statusBarHiddenForNonNotch: false,
+```
