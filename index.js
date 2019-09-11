@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react'
 import {Text, View, StatusBar, Dimensions} from 'react-native'
 import PropTypes from 'prop-types'
 import SafeAreaViewDecider from 'react-native-smart-statusbar'
-
+import * as Animatable from 'react-native-animatable';
 class ProgressBar extends PureComponent {
 	constructor(props) {
 		super(props)
@@ -19,7 +19,8 @@ class ProgressBar extends PureComponent {
 	 }
 
 	componentDidMount = () => {
-		setInterval(() => {this.blink()}, 500)
+		const { blink, durationForTheBlink }  = this.props
+		if (blink) setInterval(() => {this.blink()}, durationForTheBlink)
 	}
 
 	render() {
@@ -57,7 +58,6 @@ class ProgressBar extends PureComponent {
 				></View>
 			} else if (i === currentProgress) {
 				if (this.state.blinkComponentVisibility) {
-				console.log(`Visible:`, this.state.blinkComponentVisibility)
 				progressBarArray.push(
 					<View
 					style={{
@@ -85,7 +85,9 @@ ProgressBar.propTypes = {
 	currentProgress: PropTypes.number.isRequired,
 	totalNumberOfProgressBars: PropTypes.number.isRequired,
 	heightOfProgressBar: PropTypes.number.isRequired,
-	SafeAreaViewDeciderProps: PropTypes.object
+	SafeAreaViewDeciderProps: PropTypes.object,
+	blink: PropTypes.bool,
+	durationForTheBlink: PropTypes.number
 }
 
 ProgressBar.defaultProps = {
@@ -94,8 +96,10 @@ ProgressBar.defaultProps = {
 	heightOfProgressBar: 5,
 	SafeAreaViewDeciderProps: {
 		statusBarHiddenForNotch: false,
-		statusBarHiddenForNonNotch: true
-	}
+		statusBarHiddenForNonNotch: false,
+	},
+	blink: true,
+	durationForTheBlink: 500
 }
 
 export default ProgressBar
