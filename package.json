@@ -23,7 +23,7 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-native": "^0.60.5",
+    "react-native": "^0.61.0",
     "react-native-smart-statusbar": "^1.0.2"
   },
   "bugs": {
