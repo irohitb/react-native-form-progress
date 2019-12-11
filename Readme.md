@@ -10,7 +10,7 @@ A react native component super useful in displaying progress when user is fillin
 
 ## Updates 
 
- #### Version 1.0.2 
+ #### Version 1.0.3 
  
  1. Added `hideProgressBar` props
  2. Fixed bug for inconsistent height for first progress
