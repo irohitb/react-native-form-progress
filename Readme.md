@@ -5,6 +5,17 @@
 
 A react native component super useful in displaying progress when user is filling up forms like signup page, setting, information catering etc
 
+### Note
+ Developer of this repo looking for full time interesting oppertunities, [connect on linkedin](https://www.linkedin.com/in/irohitbh/)
+
+## Updates 
+
+ #### Version 1.0.2 
+ 
+ 1. Added `hideProgressBar` props
+ 2. Fixed bug for inconsistent height for first progress
+ 3. Removed Animatable since we aren't using it.
+
 
 ## Installing 
 
@@ -36,6 +47,7 @@ and just keep incrementing current progress
 
 | **Prop** | **Type** | **Default** | **Required** | **description** |
 |----------|----------|-------------|--------------|--------------|
+| hideProgressBar | Boolean | false | No | hides progress bar ( returns auxilary component)
 | colorOfProgressBar | string | 'black' | No | What Color do you want your progress bar to have 
 | colorOfNonProgressBar | string | 'white' | No | the space progress bar is yet to take |
 | currentProgress | number | none | Yes | the current progress of your progress bar, **increment this value** on sucessful completion of event |

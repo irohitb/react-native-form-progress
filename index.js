@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react'
 import {Text, View, StatusBar, Dimensions} from 'react-native'
 import PropTypes from 'prop-types'
-import SafeAreaViewDecider from 'react-native-smart-statusbar'
-import * as Animatable from 'react-native-animatable';
+import SafeAreaViewDecider from './../elements/SafeAreaDecider'
+
 class ProgressBar extends PureComponent {
 	constructor(props) {
 		super(props)
@@ -12,15 +12,18 @@ class ProgressBar extends PureComponent {
 
 	state = {
 		blinkComponentVisibility: false
-	 }
+	}
 
-	 blink () {
+	blink() {
 		this.setState({blinkComponentVisibility: !this.state.blinkComponentVisibility})
-	 }
+	}
 
 	componentDidMount = () => {
-		const { blink, durationForTheBlink }  = this.props
-		if (blink) setInterval(() => {this.blink()}, durationForTheBlink)
+		const {blink, durationForTheBlink} = this.props
+		if (blink)
+			setInterval(() => {
+				this.blink()
+			}, durationForTheBlink)
 	}
 
 	render() {
@@ -30,8 +33,10 @@ class ProgressBar extends PureComponent {
 			totalNumberOfProgressBars,
 			heightOfProgressBar,
 			SafeAreaViewDeciderProps,
-			colorOfNonProgressBar
+			colorOfNonProgressBar,
+			hideProgressBar
 		} = this.props
+		if (hideProgressBar) return (<> </>)
 		const widthOfIndividualBlog = this.width / totalNumberOfProgressBars
 		let {currentProgress} = this.props
 		if (currentProgress > totalNumberOfProgressBars) currentProgress = totalNumberOfProgressBars
@@ -58,22 +63,23 @@ class ProgressBar extends PureComponent {
 				></View>
 			} else if (i === currentProgress) {
 				if (this.state.blinkComponentVisibility) {
-				progressBarArray.push(
-					<View
-					style={{
-						width: widthOfIndividualBlog,
-						backgroundColor: colorOfProgressBar,
-						height: heightOfProgressBar
-					}}
-					key={i}
-				></View>)
+					progressBarArray.push(
+						<View
+							style={{
+								width: widthOfIndividualBlog,
+								backgroundColor: colorOfProgressBar,
+								height: heightOfProgressBar
+							}}
+							key={i}
+						></View>
+					)
 				}
 			}
 		}
 		return (
 			<View>
 				<SafeAreaViewDecider {...SafeAreaViewDeciderProps} />
-				<View style={{display: 'flex', flexDirection: 'row'}}>{progressBarArray}</View>
+				<View style={{display: 'flex', flexDirection: 'row', height: heightOfProgressBar}}>{progressBarArray}</View>
 			</View>
 		)
 	}
@@ -81,6 +87,7 @@ class ProgressBar extends PureComponent {
 
 ProgressBar.propTypes = {
 	colorOfProgressBar: PropTypes.string,
+	hideProgressBar: PropTypes.bool,
 	colorOfNonProgressBar: PropTypes.string,
 	currentProgress: PropTypes.number.isRequired,
 	totalNumberOfProgressBars: PropTypes.number.isRequired,
@@ -96,10 +103,12 @@ ProgressBar.defaultProps = {
 	heightOfProgressBar: 5,
 	SafeAreaViewDeciderProps: {
 		statusBarHiddenForNotch: false,
-		statusBarHiddenForNonNotch: false,
+		statusBarHiddenForNonNotch: true
 	},
+	totalNumberOfProgressBars: 5,
 	blink: true,
-	durationForTheBlink: 500
+	durationForTheBlink: 500, 
+	hideProgressBar: false
 }
 
 export default ProgressBar
