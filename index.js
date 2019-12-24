@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 import {Text, View, StatusBar, Dimensions} from 'react-native'
 import PropTypes from 'prop-types'
-import SafeAreaViewDecider from './../elements/SafeAreaDecider'
+import SafeAreaViewDecider from 'react-native-smart-statusbar'
 
 class ProgressBar extends PureComponent {
 	constructor(props) {
