@@ -8,18 +8,25 @@ A react native component super useful in displaying progress when user is fillin
 ### Note
  Developer of this repo looking for full time interesting oppertunities, [connect on linkedin](https://www.linkedin.com/in/irohitbh/)
 
-## Updates 
-
- #### Version 1.0.3 
- 
- 1. Added `hideProgressBar` props
- 2. Fixed bug for inconsistent height for first progress
- 3. Removed Animatable since we aren't using it.
-
 
 ## Installing 
 
-```npm i react-native-form-prorgress```
+
+```
+npm i react-native-device-info
+npm i react-native-form-prorgress
+```
+
+#### For IOS 
+
+```
+cd ios
+pod install
+``` 
+
+for people using RN <= 0.59, please read the installation instruction from `react-native-device-info` [repo](https://github.com/react-native-community/react-native-device-info)
+
+
 
 ### Using 
 
