@@ -1,5 +1,5 @@
 
-[![NPM](https://nodei.co/npm/react-native-form-prorgress.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-form-prorgress/)
+[![NPM](https://nodei.co/npm/react-native-form-progress.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-form-progress/)
 
 # React Native Form progress 
 
@@ -14,7 +14,7 @@ A react native component super useful in displaying progress when user is fillin
 
 ```
 npm i react-native-device-info
-npm i react-native-form-prorgress
+npm i react-native-form-progress
 ```
 
 #### For IOS 
