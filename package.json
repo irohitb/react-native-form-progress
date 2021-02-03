@@ -23,10 +23,12 @@
   "author": "\"Rohit Bhatia <irohitbhatia@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "react-native-smart-statusbar": "^1.0.16"
+  },
+  "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-native": "^0.62.1",
-    "react-native-smart-statusbar": "^1.0.16"
+    "react-native": "^0.62.1"
   },
   "bugs": {
     "url": "https://github.com/irohitb/react-native-form-prorgress/issues"
