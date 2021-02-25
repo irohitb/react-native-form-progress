@@ -11,7 +11,7 @@ export interface ProgressBarProps {
   defaultProgress: number;
   totalNumberOfProgressBars: number;
   heightOfProgressBar: number;
-  SafeAreaViewDeciderProps?: Partial<SafeAreaDeciderProps>;
+  SafeAreaViewDeciderProps?: SafeAreaDeciderProps;
   blink: boolean;
   durationForTheBlink: number;
 }
@@ -31,7 +31,7 @@ const ProgressBar = ({
   blink = true,
   durationForTheBlink = 500,
   hideProgressBar = false,
-}: Props) => {
+}: ProgressBarProps) => {
   const width = Dimensions.get('window').width;
   const [blinkVisibility, setBlinkVisiblity] = React.useState(false);
   const progressBarArray = [];

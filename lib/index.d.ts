@@ -1,18 +1,15 @@
 /// <reference types="react" />
-interface Props {
+import { SafeAreaDeciderProps } from 'react-native-smart-statusbar';
+export interface ProgressBarProps {
     colorOfProgressBar?: string;
     hideProgressBar?: boolean;
     colorOfNonProgressBar?: string;
     defaultProgress: number;
     totalNumberOfProgressBars: number;
     heightOfProgressBar: number;
-    SafeAreaViewDeciderProps?: typeof SafeAreaViewDeciderDefaultProps;
+    SafeAreaViewDeciderProps?: Partial<SafeAreaDeciderProps>;
     blink: boolean;
     durationForTheBlink: number;
 }
-declare const SafeAreaViewDeciderDefaultProps: {
-    statusBarHiddenForNotch: boolean;
-    statusBarHiddenForNonNotch: boolean;
-};
-declare const ProgressBar: ({ defaultProgress, colorOfNonProgressBar, colorOfProgressBar, heightOfProgressBar, SafeAreaViewDeciderProps, totalNumberOfProgressBars, blink, durationForTheBlink, hideProgressBar, }: Props) => JSX.Element | null;
+declare const ProgressBar: ({ defaultProgress, colorOfNonProgressBar, colorOfProgressBar, heightOfProgressBar, SafeAreaViewDeciderProps, totalNumberOfProgressBars, blink, durationForTheBlink, hideProgressBar, }: ProgressBarProps) => JSX.Element | null;
 export default ProgressBar;
