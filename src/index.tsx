@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { View, Dimensions } from 'react-native';
-import SafeAreaViewDecider from 'react-native-smart-statusbar';
+import SafeAreaViewDecider, {
+  SafeAreaDeciderProps,
+} from 'react-native-smart-statusbar';
 
-interface Props {
+export interface ProgressBarProps {
   colorOfProgressBar?: string;
   hideProgressBar?: boolean;
   colorOfNonProgressBar?: string;
   defaultProgress: number;
   totalNumberOfProgressBars: number;
   heightOfProgressBar: number;
-  SafeAreaViewDeciderProps?: typeof SafeAreaViewDeciderDefaultProps;
+  SafeAreaViewDeciderProps?: Partial<SafeAreaDeciderProps>;
   blink: boolean;
   durationForTheBlink: number;
 }

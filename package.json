@@ -36,7 +36,7 @@
   "author": "\"Rohit Bhatia <irohitbhatia@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react-native-smart-statusbar": "^1.0.22"
+    "react-native-smart-statusbar": "^1.0.23"
   },
   "peerDependencies": {
     "react": "^16.9.0",
