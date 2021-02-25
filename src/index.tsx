@@ -8,7 +8,7 @@ export interface ProgressBarProps {
   colorOfProgressBar?: string;
   hideProgressBar?: boolean;
   colorOfNonProgressBar?: string;
-  defaultProgress: number;
+  currentProgress: number;
   totalNumberOfProgressBars: number;
   heightOfProgressBar?: number;
   SafeAreaViewDeciderProps?: SafeAreaDeciderProps;
@@ -22,7 +22,7 @@ const SafeAreaViewDeciderDefaultProps = {
 };
 
 const ProgressBar = ({
-  defaultProgress,
+  currentProgress,
   colorOfNonProgressBar = 'white',
   colorOfProgressBar = 'black',
   heightOfProgressBar = 5,
@@ -53,13 +53,13 @@ const ProgressBar = ({
   }
 
   const widthOfIndividualBlog = width / totalNumberOfProgressBars;
-  const currentProgress =
-    defaultProgress > totalNumberOfProgressBars
+  const currentProgressValue =
+    currentProgress > totalNumberOfProgressBars
       ? totalNumberOfProgressBars
-      : defaultProgress;
+      : currentProgress;
 
   for (let i = 0; i < totalNumberOfProgressBars; i++) {
-    if (i < currentProgress) {
+    if (i < currentProgressValue) {
       progressBarArray.push(
         <View
           style={{
@@ -70,7 +70,7 @@ const ProgressBar = ({
           key={i}
         ></View>
       );
-    } else if (i > currentProgress) {
+    } else if (i > currentProgressValue) {
       <View
         style={{
           width: widthOfIndividualBlog,
@@ -79,7 +79,7 @@ const ProgressBar = ({
         }}
         key={i}
       ></View>;
-    } else if (i === currentProgress) {
+    } else if (i === currentProgressValue) {
       if (blinkVisibility) {
         progressBarArray.push(
           <View
