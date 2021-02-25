@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { View, Dimensions } from 'react-native';
-import SafeAreaViewDecider from 'react-native-smart-statusbar';
+import SafeAreaViewDecider, {
+  SafeAreaDeciderProps,
+} from 'react-native-smart-statusbar';
 
-interface Props {
+export interface ProgressBarProps {
   colorOfProgressBar?: string;
   hideProgressBar?: boolean;
   colorOfNonProgressBar?: string;
   defaultProgress: number;
   totalNumberOfProgressBars: number;
   heightOfProgressBar: number;
-  SafeAreaViewDeciderProps?: typeof SafeAreaViewDeciderDefaultProps;
+  SafeAreaViewDeciderProps?: SafeAreaDeciderProps;
   blink: boolean;
   durationForTheBlink: number;
 }
@@ -29,7 +31,7 @@ const ProgressBar = ({
   blink = true,
   durationForTheBlink = 500,
   hideProgressBar = false,
-}: Props) => {
+}: ProgressBarProps) => {
   const width = Dimensions.get('window').width;
   const [blinkVisibility, setBlinkVisiblity] = React.useState(false);
   const progressBarArray = [];
