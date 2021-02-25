@@ -10,10 +10,10 @@ export interface ProgressBarProps {
   colorOfNonProgressBar?: string;
   defaultProgress: number;
   totalNumberOfProgressBars: number;
-  heightOfProgressBar: number;
+  heightOfProgressBar?: number;
   SafeAreaViewDeciderProps?: SafeAreaDeciderProps;
-  blink: boolean;
-  durationForTheBlink: number;
+  blink?: boolean;
+  durationForTheBlink?: number;
 }
 
 const SafeAreaViewDeciderDefaultProps = {
@@ -27,7 +27,7 @@ const ProgressBar = ({
   colorOfProgressBar = 'black',
   heightOfProgressBar = 5,
   SafeAreaViewDeciderProps = SafeAreaViewDeciderDefaultProps,
-  totalNumberOfProgressBars = 5,
+  totalNumberOfProgressBars,
   blink = true,
   durationForTheBlink = 500,
   hideProgressBar = false,
