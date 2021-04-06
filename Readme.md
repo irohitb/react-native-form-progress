@@ -33,7 +33,7 @@ for people using RN <= 0.59, please read the installation instruction from `reac
 
 ### Using 
 
-```import ProgressBar from react-native-form-prorgress```
+`import ProgressBar from 'react-native-form-progress'`
 
 And then 
 
