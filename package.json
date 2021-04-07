@@ -39,8 +39,8 @@
     "react-native-smart-statusbar": "^1.0.23"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
-    "react-native": "^0.62.1"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "@types/react-native": "^0.63.48",
