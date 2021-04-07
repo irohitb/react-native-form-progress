@@ -34,17 +34,18 @@ const ProgressBar = ({
 }: ProgressBarProps) => {
   const width = Dimensions.get('window').width;
   const [blinkVisibility, setBlinkVisiblity] = React.useState(false);
+  const blinkInterval: any = React.useRef(null);
   const progressBarArray = [];
-
-  const changeComponentBlinkVisibility = () => {
-    setBlinkVisiblity(!blinkVisibility);
-  };
 
   React.useEffect(() => {
     if (blink) {
-      setInterval(() => {
-        changeComponentBlinkVisibility();
+      const timer = setInterval(() => {
+        console.log('called');
+        setBlinkVisiblity((blinkVisibility) => !blinkVisibility);
       }, durationForTheBlink);
+      return () => {
+        clearInterval(timer);
+      };
     }
   }, []);
 
