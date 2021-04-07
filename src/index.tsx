@@ -58,7 +58,7 @@ const ProgressBar = ({
       ? totalNumberOfProgressBars
       : currentProgress;
 
-  for (let i = 0; i < totalNumberOfProgressBars; i++) {
+  for (let i = 0; i < totalNumberOfProgressBars + 1; i++) {
     if (i < currentProgressValue) {
       progressBarArray.push(
         <View
