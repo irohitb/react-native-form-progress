@@ -40,7 +40,6 @@ const ProgressBar = ({
   React.useEffect(() => {
     if (blink) {
       const timer = setInterval(() => {
-        console.log('called');
         setBlinkVisiblity((blinkVisibility) => !blinkVisibility);
       }, durationForTheBlink);
       return () => {
