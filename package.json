@@ -1,6 +1,6 @@
 {
   "name": "react-native-form-progress",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "A react native component super useful in displaying progress when user is filling up forms like signup page, setting, information catering etc",
   "main": "lib/index.js",
   "types": "lib",
